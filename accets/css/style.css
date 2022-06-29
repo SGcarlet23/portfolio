@@ -1,0 +1,449 @@
+@charset "utf-8";
+
+* {
+    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 300px; 
+    background-image: url("../images/header.png");
+    background-position: center;
+    background-size: cover; 
+    padding-top: 56%;
+    //なぜか比率を保つ。div内でheight:auto;は不可
+    position:relative;
+} 
+
+.title {
+    width: 100%; 
+    height: 100%;
+    position:absolute;
+    color: #fffafa;
+    text-align:center;
+    padding: 25% 0 0 0;   
+    -webkit-text-stroke: 1px #000;
+    font-size: 400%;
+    letter-spacing: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    /*高さ中央*/
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dcdcdc; 
+    /*ヘッダー固定*/
+    position: fixed;
+    top: 0; 
+    z-index: 10;
+}
+
+.header li {
+    display: inline-block;
+}
+
+.logo {
+    width: 200px;
+    height: 100%; 
+    margin: 0 0 0 15%; 
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 600;
+    text-align:center;
+    padding:20px 0;     
+    //text-align:centerとpaddingで中央揃え;
+    text-decoration: none;
+}
+
+.navi {
+    margin: 0 15% 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 15px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    /*ホバー下線の基点指定*/
+}
+
+/*ヘッダー下線*/
+nav ul li a:hover {
+    color: #dc143c; 
+    transition: color .3s;
+}
+
+.navi li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+    /*線の形状*/
+    width: 120%;
+    height: 3px;
+    background:#3cb371;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left top;/*左上基点*/
+}
+
+/*現在地とhoverの設定*/ 
+.navi li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+.chapter_about,
+.chapter_works, 
+.chapter_blog{
+    whidth: 100%; 
+    margin: 0 auto 0px auto;
+    outline: 3px solid #000;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 650;
+    background-color: #f5f5f5;
+    padding: 20px 10px;
+}
+
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about img, .bgcolor {
+    vertical-align: middle;
+}
+
+.about img {
+    width: 600px;
+    height: 600px;
+    margin: auto 1% auto 3%;
+}
+
+.bgcolor {
+    width: 1000px;
+    height: 700px;
+    background-color: #CCFFFF;
+}
+
+.about_text {
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    text-align: center;
+    padding: 10% 2%;
+    /*行間*/
+    line-height: 250%;
+
+}
+
+.about_text_header {
+    font-size: 44px;
+    height: 30px;
+    line-height:300%;
+}
+
+//slider
+
+.slider {
+    width:94%;
+    margin:100px auto; 
+    padding: 0;
+    list-style: none;
+}
+
+.slider img {
+    width:30vw;
+    height:auto;
+}
+
+.slider .slick-slide {
+    transform: scale(0.8);
+    transition: all.5s;
+    opacity: 0.5;
+}
+
+.slider .slick-slide.slick-center{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.slick-prev,
+.slick-next{
+    position: absolute;
+    top: 42%;
+    cursor: pointer;
+    outline: none;
+    border-top: 4px solid #666;
+    border-right: 4px solid #666;
+    height: 15px;
+    width: 15px;
+    z-index: 10;
+}
+
+.slick-prev{
+    left: 0%;
+    transform: rotate(-135deg);
+}
+
+.slick-next{
+    right: 0%;
+    transform: rotate(45deg);
+}
+
+.slick-dots{
+    text-align:center;
+    margin: 30px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+/*下部セレクトボタン*/
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.slick-dots .slick-active button{
+    background:#333;
+}
+
+.illust{
+    width:94%;
+    margin: 50px auto 20px auto ;
+}
+
+.footer {
+    background-color: #333333;
+    widht: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sns, .contact {
+    vertical-align: middle;
+    width: 20%;
+}
+
+.sns {
+    margin:3% 0 0 25%;
+}
+
+.sns h2 {
+    color: #cccccc;
+    font-size: 40px;
+    padding: 0 0 10px 0; 
+    widht: 100%; 
+}
+
+.sns a {
+    color: #cccccc;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.sns a:hover {
+    color: #00bfff;
+    transition: color .5s;
+}
+
+.contact {
+    width: 30%;
+    padding: 0 0 5% 0;
+    margin: 3% 10% 0 10%;
+}
+
+.contact h2 {
+    width: 200px;
+    color: #cccccc;
+    font-size: 40px;
+    padding: 0 0 10px 0;
+}
+
+form {
+    widht: 1000px;
+}
+
+input, textarea, .contact-submit {
+    border: 1px solid #cccccc;
+    width: 100%;
+    font-size: 2em;
+}
+
+input {
+    height: 50px;
+    margin: 0 0 10px 0;
+}
+
+textarea {
+    height: 200px;
+    margin: 0 0 10px 0;
+}
+
+.contact-submit {
+    height: 50px;
+}
+
+.contact-submit:hover {
+    transform: scale(1.01); 
+}
+
+.contact-submit:active {
+    background-color:#a9a9a9;
+    border: 1px solid #a9a9a9;
+}
+
+/*PCファースト*/
+@media (max-width:1200px) and (min-width: 768px) {
+    nav ul li {
+        list-style: none;
+        margin: 15px 10px;
+    }
+
+    .about {
+        display: block;
+        text-align: center;
+    }
+
+    .about img {
+        width: 55%;
+        height: 55%;
+        margin: 5% auto;
+    }
+
+    .bgcolor {
+        width: 90%;
+        margin: 0 auto 5% auto;
+    }
+
+    .sns h2,.contact h2  {
+        //font-size: 32px;
+        padding: 0; 
+    }
+
+    .sns a {
+        //font-size: 16px;
+    }
+
+    input, textarea {
+        font-size: 1em;
+    }
+
+    input {
+        height: 40px;
+    }
+
+}
+
+@media (max-width:767px) {
+    nav {
+        text-align:center;
+        display: block;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+        margin: auto; 
+        padding: auto; 
+        cursor: pointer;
+        font-size: 28px;
+        text-align: center;   
+        /*親要素の高さと同じにして上下中央揃え*/
+        line-height: 80px;
+    }
+
+    .title {
+        padding: 25% 0 0 0;   
+        font-size: 300%;
+        letter-spacing: 3px;
+    }
+
+    .navi { 
+        /*要素非表示*/
+        display: none;
+    }
+
+    .about {
+        display: block;
+        text-align: center;
+    }
+
+    .about img {
+        width: 70%;
+        height: 70%;
+        margin: 5% auto;
+    }
+
+    .bgcolor {
+        width: 95%;
+        height: 100%;
+        margin: 0 auto 5% auto;
+    }
+
+    .about_text {
+        font-size: 18px;
+        padding: 5%;
+        /*行間*/
+        line-height: 230%;
+    }
+    
+    .about_text_header {
+        font-size: 38px;
+        line-height:120%;
+    }
+
+    .slider img {
+        width:100vw;
+    }
+
+    .footer {
+        widht: 100%;
+        display: block;
+    }
+
+    .sns, .contact {
+        vertical-align: middle;
+        width: 80%;
+        height: 30%;
+        margin: 0 auto;
+    }
+
+    .sns h2, .contact h2 {
+        padding: 20px 0 10px 0;
+    }
+
+    .contact {
+        padding: 0 0 10% 0;
+    }
+    
+}
