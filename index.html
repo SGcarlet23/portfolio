@@ -5,30 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scarle Diary</title>
-    <meta name="description" content="いろいろがんばりたい。">
     <!-- 詳細 -->
+    <meta name="description" content="いろいろがんばりたい。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./accets/css/sanitize.css">
     <!-- 土台 -->
-    
+    <link rel="stylesheet" href="./accets/css/sanitize.css">
+    <!--slick-->
     <link rel="stylesheet" href="./accets/slick/slick.css">
     <link rel="stylesheet" href="./accets/css/style.css">
+    <!-- アイコンCDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <p class="title">Daily Efforts</p>
-    <div class="header" id="header"> <!--ジャンプ先にID　ボタンにhref="#example"-->
-        <nav>
+    <div class="header_home" id="header"> <!--ジャンプ先にID　ボタンにhref="#example"-->
+        <nav class="header_nav">
+            <!--バーガーメニュー-->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <!-- ヘッダーロゴ・navbar -->
             <a class="logo" href="#header">Scarle Diary</a>
-            <ul class="navi">
-                <li><a href="#">Photos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#footer">お問い合わせ</a></li>
-            </ul> <!--各種リンク-->
+            <ul class="navi"> <!--各種リンク-->
+                <li class="nav_home"><a href="#header">Home</a></li>
+                <li class="nav_photos"><a href="./photos.html">Photos</a></li>
+                <li class="nav_blog"><a href="./blog.html">Blog</a></li>
+                <li class="nav_contact"><a href="#footer">Contact</a></li>
+            </ul> 
         </nav>
+
     </div>
 
     <div class="main">
@@ -37,13 +47,13 @@
         </p>
         <div class="about">
             <img src="./accets/images/icon.png" alt="icon">
-            <div class="bgcolor">
+            <div class="about_bgcolor">
                 <p class="about_text">
                     <span class="about_text_header">PROFILE</span><br>
                     愛知県生まれ愛知県育ちの大学生<br>
-                    趣味はゲーム・お絵描き、寝ること大好き<br>
-                    知識ゼロからゲーム作りや<br>
-                    自分のゲームコミュニティを作ることを夢見ている。
+                    お絵描きと寝ることが大好き<br>
+                    最近老いを感じ始め、恐怖ていたりする<br>
+                    将来はひとり暮らしをして猫を飼うことを夢見ている
                 </p>
             </div>
         </div>
@@ -52,24 +62,24 @@
             WORKS
         </p>
         <div class="illust">
-            <ul class="slider">
+            <ul class="slider"> <!--作品スライダー-->
                 <li><img src="./accets/images/illust1.jpg" alt="illust1"></li>
                 <li><img src="./accets/images/illust2.png" alt="illust2"></li>
                 <li><img src="./accets/images/illust3.png" alt="illust3"></li>
                 <li><img src="./accets/images/illust4.png" alt="illust4"></li>
                 <li><img src="./accets/images/illust5.png" alt="illust5"></li>
-            </ul> <!--作品スライダー-->
+            </ul> 
         </div>
     </div>
     
     <div class="footer" id="footer">
         <div class="sns">
             <h2>SNS</h2>
-            <a href="https://twitter.com/SGcarlet23">Twitter</a>
+            <a href="###"><i class="fa-brands fa-twitter fa-fw fa-lg" ></i>Twitter</a>
         </div>
 
-        <div class="contact">
-            <h2>CONTACT</h2>
+        <div class="contact"> <!-- お問い合わせ -->
+            <h2>CONTACT</h2> 
             <form action="#" method="post">
                 <input type="email" name="email" placeholder="メールアドレス">
                 <br>
@@ -80,8 +90,12 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--リンク先スクロール、スライダー-->
     <script src="./accets/slick/slick.min.js"></script>
+    <!--Lightbox2、photo拡大-->
+    <script src="./accets/js/lightbox.min.js"></script>
     <!--自作のJS-->
     <script src="./accets/js/script.js"></script>
 </body>
 </html>
+

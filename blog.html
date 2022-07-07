@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarle Diary -Blog-</title>
+    <!-- 詳細 -->
+    <meta name="description" content="写真あつめました。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 土台 -->
+    <link rel="stylesheet" href="./accets/css/sanitize.css">
+    <!--slick-->
+    <link rel="stylesheet" href="./accets/slick/slick.css">
+    <link rel="stylesheet" href="./accets/css/style.css">
+    <!-- アイコンCDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p class="title">Daily Efforts</p>
+    <div class="header_blog" id="header"> <!--ジャンプ先にID　ボタンにhref="#example"-->
+        <nav class="header_nav"> 
+            <!--バーガーメニュー-->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <a class="logo" href="#header">Scarle Diary</a>
+            <ul class="navi"> <!--各種リンク-->
+                <li class="nav_home"><a href="./index.html">Home</a></li>
+                <li class="nav_photos"><a href="./photos.html">Photos</a></li>
+                <li class="nav_blog"><a href="#header">Blog</a></li>
+                <li class="nav_contact"><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="main">
+        <p class="chapter_blog">
+            BLOG
+        </p>
+        <div class="blog">
+            <nav class="table_of_contents"> <!-- もくじ -->
+                <h1 class="list_title">LIST</h1>
+                <ul>
+                    <li class="section"><a href="#content_01">2022年</a></li>
+                    <li class="section"><a href="#content_02">7月</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">　
+                <h1 class="blog_title year_title" id="content_01">2022年</h1>
+                <h1 class="blog_title" id="content_02">7月</h1>
+                <div class="card_wrap">
+
+                    <div class="blog_card_list"> 
+                        <p><img class="blog_img" src="accets\photos\blog\blog_img01.jpg"></p>
+                        <h2 class="card_list_title">コーディングを終えて</h2>
+                        <h3 class="card_list_link">つづきを読む<h3>
+                    </div>
+
+                    <div class="blog_card_list">
+                        <p><img class="blog_img" src="accets\photos\blog\blog_img02.jpg"></p>
+                        <h2 class="card_list_title">もう7月!?</h2>
+                        <h3 class="card_list_link">つづきを読む<h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer" id="footer">
+        <div class="sns">
+            <h2>SNS</h2>
+            <a href="###"><i class="fa-brands fa-twitter fa-fw fa-lg" ></i>Twitter</a>
+        </div>
+
+        <div class="contact"> <!-- お問い合わせ -->
+            <h2>CONTACT</h2>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="メールアドレス">
+                <br>
+                <textarea type="text" name="inquiry" placeholder="メッセージ"></textarea>
+                <button type="submit" class="contact-submit">送信</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--リンク先スクロール、スライダー-->
+    <script src="./accets/slick/slick.min.js"></script>
+    <!--Lightbox2、photo拡大-->
+    <script src="./accets/js/lightbox.min.js"></script>
+    <!--自作のJS-->
+    <script src="./accets/js/script.js"></script>
+</body>
+</html>
