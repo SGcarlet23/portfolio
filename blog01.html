@@ -21,8 +21,7 @@
     <script src="https://sdk.form.run/js/v2/formrun.js"></script>
 </head>
 <body>
-    <p class="title">Daily Efforts</p>
-    <div class="header_home" id="header"> <!--ジャンプ先にID　ボタンにhref="#example"-->
+    <div class="header_blog01" id="header"> <!--ジャンプ先にID　ボタンにhref="#example"-->
         <nav class="header_nav">
             <!--バーガーメニュー-->
             <div class="burger">
@@ -33,43 +32,47 @@
             <!-- ヘッダーロゴ・navbar -->
             <a class="logo" href="#header">Scarle Diary</a>
             <ul class="navi"> <!--各種リンク-->
-                <li class="nav_home"><a href="#header">Home</a></li>
+                <li class="nav_home"><a href="./index.html">Home</a></li>
                 <li class="nav_photos"><a href="./photos.html">Photos</a></li>
                 <li class="nav_blog"><a href="./blog.html">Blog</a></li>
                 <li class="nav_contact"><a href="#footer">Contact</a></li>
             </ul> 
         </nav>
-
     </div>
 
-    <div class="main">
-        <p class="chapter_about">
-            ABOUT
+    <div class="main_blog">
+        <p class="chapter_blog_head">
+            Blog
         </p>
-        <div class="about">
-            <img src="./accets/images/icon.png" alt="icon">
-            <div class="about_bgcolor">
-                <p class="about_text">
-                    <span class="about_text_header">PROFILE</span><br>
-                    愛知県生まれ愛知県育ちの大学生<br>
-                    お絵描きと麺類が大好き<br>
-                    最近老いを感じ始め、恐怖ていたりする<br>
-                    将来はひとり暮らしをして猫を飼うことを夢見ている
-                </p>
-            </div>
-        </div>
-        
-        <p class="chapter_works">
-            WORKS
-        </p>
-        <div class="illust">
-            <ul class="slider"> <!--作品スライダー-->
-                <li><img src="./accets/images/illust1.jpg" alt="illust1"></li>
-                <li><img src="./accets/images/illust2.png" alt="illust2"></li>
-                <li><img src="./accets/images/illust3.png" alt="illust3"></li>
-                <li><img src="./accets/images/illust4.png" alt="illust4"></li>
-                <li><img src="./accets/images/illust5.png" alt="illust5"></li>
-            </ul> 
+        <div class="sentence">
+            <p class="sentence_text">
+                <span class="sentence_span">コーディングを終えて</span><br>
+                <br>
+                第一の感想としては、コーディングをなめていた・・・ <br>
+                高校生時代、授業でHTMLを学んだ時は、
+                「ホームページって案外簡単に作れるんだな」って思っていた。<br>
+                そしてProgateでHTMLに併せてCSSを学び、難しい印象は持たなかった。<br>
+                しかし、Progateのように直前に使うコードを教わり、
+                完成品を真似て作るのとは違い、<br>
+                「この要素をここに変形させて表示させたい」といった、
+                他要素との兼ね合いを考えた記述にはとても苦労した。<br>
+                一番時間がかかったのは全体的に親要素との関係で、幅が自由に効かないことだった。<br>
+                デベロッパーツールで逐一確認するまでは、「幅の変化が効かないじゃん」と嘆いていた。<br>
+                そもそも「width」を「widht」と誤入力してそもそも効かないこともあった（恥ずかしい）。<br>
+                逆に、一番楽しかったのはダークモード・レスポンシブ対応である。<br>
+                サイズが変更されても見やすくするためには、固定幅にするのか割合にするのか考えることが好きだった。<br>
+                <br>
+                あと先人は偉大であることの再確認。<br>
+                始めた当初は３日もあれば大体は形になると予想していた。
+                しかし、実際は完成まで約２週間かかってしまった。<br>
+                スライダーや画像拡大を始めから作ろうと考えたら、
+                追加で2週間以上はかかっていただろうなと思う。<br>
+                鮮やかなサイト作りをできる自信がなかったので、
+                むしろ余分な色合いを控えて、作品に目を向けてもらえるように、<br>
+                絵や写真以外にはできるだけ色をつけないようにしました。<br>
+                つぎにコーディングするときは、今回の質素なデザインとは違った大手ECサイトのような <br>
+                鮮やかで見応えのあるサイトを作りたいと思う。
+            </p>
         </div>
     </div>
     
@@ -99,4 +102,3 @@
     <script src="./accets/js/script.js"></script>
 </body>
 </html>
-

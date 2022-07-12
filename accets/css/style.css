@@ -60,7 +60,7 @@
     letter-spacing: 10px;
 }
 
-/*画像内文字*/
+/*ヘッダーナビゲーションバー*/
 .header_nav {
     width: 100%;
     height: 8vh;
@@ -73,7 +73,6 @@
     position: fixed;
     top: 0; 
     z-index: 10;
-
 }
 
 /*左上Scarleロゴ*/
@@ -172,6 +171,53 @@
     font-weight: 650;
     background-color: #f5f5f5;
     padding: 20px 10px;
+}
+
+.main_blog {
+    background-color: #c0c0c0;
+}
+
+.chapter_blog_head {
+    whidth: 100%; 
+    margin: 8vh auto 0px auto;
+    outline: 3px solid #000;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 650;
+    background-color: #f5f5f5;
+    padding: 20px 10px;
+}
+
+.sentence{
+    width: 70%;
+    margin: auto;
+    background-color: #f5f5f5;
+}
+
+.sentence_text {
+    font-size: 18px;
+    padding: 5% 2%; 
+    line-height: 50px;
+}
+
+.sentence_span {
+    font-size: 22px;
+    font-weight: 600; 
+    border-bottom: 2px solid #000;
+}
+
+.sentence_pr {
+    font-size: 18px;
+    padding: 5% 2%; 
+    line-height: 50px;
+    padding: 0 0 0 70px;
+}
+
+.sentence_prin {
+    font-size: 18px;
+    padding: 5% 2%; 
+    line-height: 50px;
+    padding: 0 0 0 80px;
 }
 
 /*about要素*/
@@ -505,7 +551,11 @@ textarea {
     width: 27%;
 }
 
-.card_list_link:hover {
+.card_list_link a {
+    text-decoration: none;
+}
+
+.card_list_link a:hover {
     color: #ff1493;
     transition-duration: 0.2s;
 }
@@ -520,6 +570,10 @@ textarea {
     .navi { 
         width: 46%; 
         margin: 0 3% 0 0;
+    }
+
+    .sentence{
+        width: 90%;
     }
 
     .about {
@@ -684,6 +738,10 @@ textarea {
         display: block;
     }
 
+    .sentence{
+        width: 100%;
+    }
+
     .about {
         display: block;
         text-align: center;
@@ -830,6 +888,22 @@ textarea {
     .chapter_photos,
     .chapter_blog{
         background-color: #101010;
+    }
+
+    .main_blog {
+        background-color: #696969;
+    }
+
+    .chapter_blog_head {
+        background-color: #101010;
+    }
+
+    .sentence_text {
+        background-color: #404040;
+    }
+
+    .sentence_span {
+        border-color: #f5f5f5;
     }
 
     .about_bgcolor {
